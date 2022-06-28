@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="/styles/form.css">
+</head>
+<body>
+    <main>
+        <ul>
+            <li class="alert alert-danger" role="alert" th:each="error : ${#fields.errors('userLogin.*')}" th:text="${error}"></li>
+        </ul>
+        <form th:action="@{/logUser}" class="login-form form" method="post" th:object="${userLogin}">
+            <h2 class="title">Login</h2>
+            <input type="text" class="input" th:field="*{email}" placeholder="Email">
+            <input type="password" class="input" th:field="*{password}" placeholder="Password">
+            <button class="btn">
+                  Login
+            </button>
+
+            <a href="/register">Does not have an account? Register</a>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <h1 th:text="'Hello ' + ${user.username} + '!'"></h1>
+    <h2>Technologies used to make this web app</h2>
+    <ul>
+        <li>Java</li>
+        <li>Spring Boot</li>
+        <li>Spring Validation</li>
+        <li>Thymeleaf</li>
+        <li>CSS</li>
+        <li>HTML</li>
+    </ul>
+
+    <p>
+        All the user information are stored in an Application Context Bean and are not for production usage
+    </p>
+
+    <a th:href="@{/logOut}"><h3>
+        Log Out
+    </h3></a>
+</body>
+</html>

@@ -1,0 +1,78 @@
+:root {
+    --background: #605eff;
+    --background-form: #ffffff;
+    --background-btn: #4796ff;
+    --background-input: #f8f8f8;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.register-form {
+    width: 30vw;
+}
+
+.login-form {
+    width: 30vw;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--background-form);
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.input {
+    padding: 10px;
+    background-color: var(--background-input);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn {
+    text-align: center;
+    background-color: var(--background-btn);
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+    color: var(--background-form);
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.alert {
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.alert-danger {
+    color: #842029;
+    background-color: #ff0017;
+    border-color: #ff001a;
+}
+
+ul {
+    list-style: none;
+}
